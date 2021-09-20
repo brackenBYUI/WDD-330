@@ -5,5 +5,15 @@ body {
   
   h1 {
     background-color: #69BB01;
-    padding: .7em;
+    padding: 15px;
+  }
+
+  h2 {
+    background-color: #48A9A6;
+    padding: 10px;
+  }
+
+  li {
+    padding: 15px 30px 20px;
+    min-width: 80px;
   }
