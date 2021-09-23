@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 2 Team Activity</title>
+    <script>
+        function saveText() {
+            var text = document.getElementById("textArea").value
+            document.getElementById("textDiv").innerHTML = text
+        }
+        function sumFunc() {
+            var number = document.getElementById("numberInput").value;
+            sum(number);
+        }
+        sum = (x) => {
+            let sum = 0;
+            for (let i = 1; i <= x; i++) {
+                sum = sum + i;
+            }
+            document.getElementById("sumDiv").innerHTML = sum;
+        }
+        function add() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let add = parseFloat(num1) + parseFloat(num2);
+            document.getElementById("mathDiv").innerHTML = add;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>WDD 330 Team Work for Week 2</h1>
+    </header>
+    <div>
+        <h2>Input</h2>
+        <input type="text" id="txt1">
+        <button onclick="exercise1()">Show Text</button>
+        <div id="txtOutput"></div>
+    </div>
+    <div>
+        <h2>Sum the secuence</h2>
+        <input type="number" id="number">
+        <button onclick="exercise2()">Sum until the number</button>
+        <div id="txtOutput2"></div>
+    </div>
+    <div>
+        <h2>Add numbers</h2>
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <button onclick="exercise3()">+</button>
+        <button onclick="multiply()">x</button>
+        <button onclick="substract()">-</button>
+        <div id="txtOutput3"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
