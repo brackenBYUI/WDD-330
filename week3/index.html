@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 3 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Week 3 Notes</h1>
+    <h2>Object Methods: this</h2>
+    <p>Arrow Functions do not have their own this. If we reference this from an arrow function its' taken from the outer function. <br>
+        The value of this is defined at run-time.</p>
+    <h2>Chapter 5: Objects</h2>
+    <p>An object is a self-contained et of related values and functions.<br>
+        Objects can inherit properties from other objects.<br>
+        Object literal is an object that is created directly in the language by wrapping all its properties and methods with curly braces.<br>
+        Each property is a key-value pair, separated by commas.<br>
+        If the property name doesn't follow the variable naming rules it will need to be quoted.<br>
+        Use the dot notation to access properties of an object.<br>
+        To add a new property to an object you can simply assign a value to the new property.<br>
+        Use the <b>delete</b> operator to remove any property.<br>
+        You can even next objects. You can mix different notations to access properties.<br>
+    </p>
+    <h2>Chapter 6: Document Object Model</h2>
+    <p>The DOM represents an HTMl document as a network of connected nodes that form a tree-like structure.<br>
+        The DOM treats everything on the page as a node.<br>
+        There are DOM shortcuts <b>Document.body</b>, <b>Document.images</b>, <b>Document.links</b>, <b>Document.anchors</b>, <b>Document.forms</b><br>
+        You can get elements many different ways <b>getElementById()</b>, <b>getElementsByTagName()</b>, <b>getElementsByClassName()</b>, <b>querySelector()</b>, <b>querySelectorAll()</b><br>
+        Find the value of a node <b>.firstChild</b>, <b>.nodeValue</b>, <b>.textContent</b><br>
+        You can get and set element's attributes <b>getAttributes()</b>, <b>setAttribute()</b><br>
+        You can create Nodes <b>createElement()</b>, <b>createTextNode()</b><br>
+        After creating you will need to append the Nodes <b>appendChild()</b> and this will get the elements on the page.<br>
+        </p>
+    <h2>Chapter 7: Events</h2>
+    <p>Event listeners are added to elements on the page and are part of the DOM. Until the event happens the program will continue to run.<br>
+        The click even occurs when a user clicks with the mouse, presses the Enter key, or taps the screen.<br>
+        The recommended way of adding event listeners is on the DOM. <b>document.body.addEventListener('click', doSomething)</b><br>
+        You can find the coordinates of where the event occurred <b>screenX, screenY</b>, <b>clientX, clientY</b>, <b>pageX, pageY</b><br>
+        There are a lot of event types you can narrow them down to <b>Mouse events</b>, <b>Keyboard Events</b>, <b>Modifier Keys</b>, <b>Touch Events</b><br>
+        </p>
+    <h2>Questions</h2>
+    <ol>
+        <li>Can you use <b>this</b> to call a method in another method?</li>
+        <li>I assume you will need to google most of the method calls for stuff like math and RegExp?</li>
+        <li>When removing elements is it easier to remove from the DOM tree or just us CSS to change the display?</li>
+        <li>The reading didn't go into it but why is adding the event to the DOM better than inline with the HTML?</li>
+    </ol>
+</body>
+</html>

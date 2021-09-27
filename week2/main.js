@@ -29,7 +29,6 @@ const substract = function() {
     showText (result, "txtOutput3");
 };
 
-// what: is  text to show  where: is the id of the div to show the result
 function showText(what, where) {
     const txtOutput = document.querySelector(`#${where}`);
     txtOutput.innerHTML = what;
