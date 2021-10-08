@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+.vert {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.hori {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 5px auto;
+    font-size: 30px;
+    text-align: center;
+}
+main {
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.gameTable {
+    justify-content: space-evenly;
+}
+.gameTable td {
+    width: 100px;
+    height: 100px;   
+}
+.playerInput {
+    margin: auto;
+    border-radius: 2px solid black;
+    padding: 1rem;
+}
+.playerForm {
+    margin: auto;
+    border-radius: 1px solid black;
+
+}
+.playerForm input, .playerForm label {
+    margin-bottom: 1rem;
+}
