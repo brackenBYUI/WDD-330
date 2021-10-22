@@ -84,3 +84,8 @@ input {
     zoom: 2;
     content: '\f0aa';
 }
+
+.to-do-input {
+    display: flex;
+    justify-content: center;
+}
