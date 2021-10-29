@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 7 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Week 7 Notes</h1>
+    <h2>Chapter 11: Further Functions</h2>
+    <p>The fact that functions are first-class objects means they can have properties and methods themselves.<br>
+        The <b>call()</b> method can be used to set the value of <b>this</b> inside a function to an object that is provided as the first argument.<br>
+        The <b>apply()</b> method works in the same way as the <b>call()</b> method, except the arguments of the function are provided as an array, even if there is only one argument.<br>
+        These are two powerful methods, as they allow generalized functions to be written that are not tied to specific objects by being methods of that object. This gives flexibility over how the functions can be used.<br>
+        There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript.<br>
+        If a function takes some time to compute a return value, we can save the result in a <b>cache</b> property.<br>
+        An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it’s defined.<br>
+        This is easily achieved by placing parentheses at the end of the function definition. The function also has to be made into an expression, which is done by placing the whole declaration inside parentheses.<br>
+        Placing any code that uses the temporary variable inside an IIFE will ensure it’s only available while the IIFE is invoked, then it will disappear.<br>
+        The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function to a variable that has the same name as the function.<br>
+        If the function is also assigned to another variable, this variable will maintain the original function definition and not be rewritten.<br>
+        This is called the Lazy Definition Pattern and is often used when some initialization code is required the first time it’s invoked. This means the initialization can be done the first time it’s called, then the function can be redefined to what you want it to be for every subsequent invocation.<br>
+        A recursive function is one that invokes itself until a certain condition is met. Like factorial or Collatz Conjecture<br>
+
+        </p>
+    <h2>Chapter 13: AJAX</h2>
+    <p>Ajax allows JavaScript to request resources from a server on behalf of the client. The resources requested are usually JSON data or small fragments of text or HTML rather than a whole web page.<br>
+        Typically this involves using a server-side language, such as PHP, Ruby, Node.js, or .NET to serve the data response following an Ajax request (usually from a back-end database).<br>
+        Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts that had become cumbersome when using the XMLHttpRequest object.<br>
+        Each response object has an <b>ok</b> property that checks to see if the response is successful.<br>
+        The ok property will return true if the status property is between 200 and 299.<br>
+        The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object.<br>
+        JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.<br>
+        HTTP headers are used to pass on any additional information about a request or response. Typical information contained in headers includes the file-type of the resource, cookie information, authentication information and when the resource was last modified.</p>
+    <a href="./ajax/ajax.html">Ajax Get Example</a>
+    <a href="./ajax/todo.html">Ajax Post Example</a>
+    <h2>Questions</h2>
+    <ol>
+        <li>It seems that ES6 has mad the use of IIFE unneeded. Is there anytime we would need to us an IIFE?</li>
+        <li>Do you think there are any systems out there running every number through a Collatz function to find one that does not end with 1?</li>
+    </ol>
+</body>
+</html>

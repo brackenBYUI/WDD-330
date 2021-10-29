@@ -38,6 +38,14 @@ const links = [
     {
       label: "ToDo List",
       url: "ToDo/index.html"
+    },
+    {
+      label: "Week 7 Notes",
+      url: "week7/index.html"
+    },
+    {
+      label: "Week 7 Team Activity",
+      url: "week7/teamActivity/index.html"
     }
   ]
 
