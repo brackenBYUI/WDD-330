@@ -1,13 +1,9 @@
-var type = ""; // dellete may be
+
 export default class Comments {
   constructor(elementId, typeOfComments) {
-    console.log("elementId:", elementId);
-    console.log("typeOfComments:", typeOfComments);
     this.parentElement = document.getElementById(elementId);
     this.type = typeOfComments;
-    console.log("this.type:", this.type);
     this.cl = getFromLocalStorge(this.type) || [];
-    console.log("this.cl:", this.cl);
   }
 
   showCommentsList(typeOfFilter) {
@@ -30,9 +26,6 @@ export default class Comments {
   }
 
   renderCommentList(listOfCommentsToRender, typeOfFilter) {
-    console.log("listOfCommentsToRender: ", listOfCommentsToRender);
-    console.log("ttypeOfFilter: ", typeOfFilter);
-
     let listOfComments = document.createElement("ul");
     listOfCommentsToRender.forEach((comment) => {
       let individualComment = document.createElement("li");
@@ -86,7 +79,6 @@ export default class Comments {
       type: this.type,
     };
     this.cl.push(c);
-    console.log("cl: ", this.cl);
     addLocalSotrage(this.type, this.cl);
     this.showCommentsList(nameOfComment);
   }
@@ -103,8 +95,6 @@ function getToday() {
 }
 
 function addLocalSotrage(key, data) {
-  console.log("key in LS:", key);
-  console.log("data in LS:", data);
   localStorage.setItem(key, JSON.stringify(data));
 }
 
