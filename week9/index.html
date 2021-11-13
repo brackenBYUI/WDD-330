@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 9 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Week 9 Notes</h1>
+    <h2>Chapter 9: The Window Object</h2>
+    <p>
+        The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.<br>
+        Global variables are actual properties of a global object. In a browser environment, the global object is the window object.<br>
+        The window object has a navigator property that returns a reference to the Navigator object. The Navigator object contains information about the browser being used.<br>
+        The window.location property is an object that contains information about the URL of the current page.<br>
+        The window.history property can be used to access information about any previously visited pages in the current browser session. <br>
+        A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its first parameter, the window title as its second parameter, and a list of attributes as the third parameter.<br>
+        The window.screen object contains information about the screen the browser is displayed on. You can find out the height and width of the screen in pixels<br>
+        Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.<br>
+        Cookies are small files that are saved locally on a user’s computer. <br>
+        Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users.<br>
+    </p>
+    <h2>Chapter 14: HTML5 APIs</h2>
+    <p>
+        The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.<br>
+        The information contained in the attributes can be used to identify particular elements. For example, all the elements with an attribute of data-dropdown could be identified as dropdown menu.<br>
+        The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use.<br>
+        If a browser supports the Web Storage API, the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data.<br>
+        Web workers allow processes to be run in the background, adding support for concurrency in JavaScript.<br> 
+    </p>
+    <h2>Questions</h2>
+    <ol>
+        <li>Will some browsers allow you to use HTML5 web storage and other would require cookies so would your code have to be able to use both?</li>
+    </ol>
+</body>
+</html>
