@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 10 Notes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Week 10 Notes</h1>
+    <h2>MDN: Validating forms</h2>
+    <p>
+        When you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application.<br>
+        Different types of client-side validation: Built-in form validation uses HTML5 form validation features, JavaScript validation is coded using JavaScript.
+        <a href="./formValidation/built-in.html">Built In Validation</a>
+        <a href="./formValidation/js-validating.html">Java Script Validation</a>
+    </p>
+    <h2>MDN: Using Fetch</h2>
+    <p>
+        The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.<br>
+        Fetch requests are controlled by the connect-src directive of Content Security Policy rather than the directive of the resources it's retrieving.<br>
+        The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings<br>
+        A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side<br>
+        Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument<br>
+        The Headers interface allows you to create your own headers object via the Headers() constructor. A headers object is a simple multi-map of names to values<br>
+
+    </p>
+    <h2>Questions</h2>
+    <ol>
+        <li>Would you want to use both Java script and built in validation on most applications?</li>
+        <li>I have always used fetch to get a json object how often would you use fetch to get other object like a text object or image?</li>
+    </ol>
+</body>
+</html>
