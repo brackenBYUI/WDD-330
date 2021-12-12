@@ -22,7 +22,8 @@ class WeatherView {
         let weekDay = new Date(element.dt * 1000).getDay();
         day.innerHTML = `
           <p>${weekday[weekDay]}</p>
-          <p>${Math.round(element.temp.day)}&deg;</p>`;
+          <p>${Math.round(element.temp.day)}&deg;</p>
+          <button class="btn-more" id="more">More Info</button>`;
           listElement.children[1].children[1].appendChild(day);
     });
   }
@@ -37,7 +38,7 @@ class WeatherView {
     let sunDownTime = new Date(weatherProperties.sunset * 1000);
     let sunDown = `${sunDownTime.getHours()}:${sunDownTime.getMinutes()}`;
     element.parentElement.parentElement.innerHTML = `<h1>${weekday[day]}</h1>
-      <div>
+      <div class="details-container">
         <div class="temp">
           <h2>Temperature</h2>
           <p>Morning: ${Math.round(weatherProperties.temp.morn)}&deg;</p>
@@ -54,11 +55,17 @@ class WeatherView {
           <p>Evening: ${Math.round(weatherProperties.feels_like.eve)}&deg;</p>
           <p>Night: ${Math.round(weatherProperties.feels_like.night)}&deg;</p>
         </div>
-        <p>Sunrise: ${sunUp}</p>
-        <p>Sunset: ${sunDown}</p>
-        <p>Wind Speed: ${Math.round(weatherProperties.wind_speed)} Miles/Hour</p>
-        <p>Humidity: ${Math.round(weatherProperties.humidity)}&percnt;</p>
-        <p>Atmospheric Temperature: ${Math.round(weatherProperties.dew_point)}&deg;</p
+        <div>
+        <h2>Sun</h2>
+          <p>Sunrise: ${sunUp}</p>
+          <p>Sunset: ${sunDown}</p>
+        </div>
+        <div>
+          <p>Wind Speed: ${Math.round(weatherProperties.wind_speed)} Miles/Hour</p>
+          <p>Humidity: ${Math.round(weatherProperties.humidity)}&percnt;</p>
+          <p>Atmospheric Temperature: ${Math.round(weatherProperties.dew_point)}&deg;</p
+        </div>
+      </div>
       </div>
       <button class="btn" onClick="window.location.reload();">Back</button>`;
   }

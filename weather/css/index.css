@@ -1,8 +1,15 @@
+body {
+    background: #FFFECB;
+    padding: 0 10%;
+}
+
 h1 {
     text-align: center;
 }
+
 .week-forecast {
     border: 2px black solid;
+    background: #F08700;
 }
 
 .week-forecast h3 {
@@ -11,14 +18,16 @@ h1 {
 
 .week-forecast ul {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
     justify-items: center;
+    grid-auto-flow: column;
     list-style-type: none;
+    
 }
 
 .week-forecast li {
     border: 2px black solid;
     width: 120px;
+    background: #5E8646;
 }
 
 .week-forecast li p {
@@ -35,4 +44,24 @@ h1 {
     background: #056cb6;
     color: white;
     margin-top: 2em;
+  }
+
+  .btn-more {
+    margin-left: 8%;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 4px;
+    background: #056cb6;
+    color: white;
+  }
+
+  #current {
+      margin-left: 20px;
+  }
+
+  .details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }

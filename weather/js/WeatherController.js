@@ -39,9 +39,10 @@ export default class WeatherController {
     const weatherList = await this.weather.getWeather(this.position);
     this.weatherView.renderWeatherList(weatherList, this.parentElement);
 
-    document.querySelectorAll('#week').forEach(item => {
+    document.querySelectorAll('#more').forEach(item => {
         item.addEventListener('click', e => {
-            this.getDayDetails(e.target.dataset.id);
+            console.log(e.target.parentElement.dataset.id)
+            this.getDayDetails(e.target.parentElement.dataset.id);
           });
     })
   }
